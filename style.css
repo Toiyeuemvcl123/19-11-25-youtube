@@ -13,18 +13,27 @@ body{
 	background: rgba(13, 13, 20);
 	font-family: Poppins, sans-serif;
 	overflow-x: hidden;
+	padding-left: 86px;
 }
 html{
 	scroll-behavior: smooth;
 }
-
+button{
+	cursor: pointer;
+}
+.fsvg{
+	filter:invert(75%);
+}
 /*HEADER*/
 header{
 	position: fixed;
+	left: 0;
+	top: 0;
 	width: 100%;
 	background: rgba(13, 13, 20, 0.8);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    z-index: 100;
 }
 .head1{
 	height: 56px;
@@ -46,32 +55,92 @@ header{
 }
 .search{
 	font-size: 20px;
-	padding-left: 15px;
+	padding-left: 16px;
+	height: 40px;
+	flex: 1;
+	border-style: solid;
+	border-width: 0.7px;
+	border-color: lightgrey;
+	border-radius: 20px 0 0 20px;
 }
+
 .right-head1{
 	width: 230px;
 	display: flex;
 	align-items: center;
 	justify-content: end;
-	column-gap: 35px;
+	column-gap: 10px;
 	padding-right: 35px;
 }
 .head2{
 	height: 56px;
 	margin-left: 250px;
+
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	column-gap: 20px;
+	justify-content: left;
+	column-gap: 40px;
 }
+.h2{
 
+	height: 30px;
+	background-color: rgba(255, 255, 255, 0.1);
+	color: white;
+	border: none;
+	padding-inline: 13px;
+	border-radius: 30px;
+}
+.sidebar{
+	position: fixed;
+	top: 56px;
+	bottom: 0;
+	left: 0;
+	width: 80px;
+	background: rgba(10, 12, 20);
+	color: white;
+	z-index: 100;
+	
+}
+.sidebar-but{
+	background: rgba(10, 12, 20);
+	margin-right: 10px;
+	margin-left: 3px;
+	height: 80px;
+	border: none;
+	border-color: grey;
+	border-radius: 12px;
+	margin-bottom: 1px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.sidebar-but:hover{
+	background-color: #f1f1f1;
+	opacity: 0.3;
+	transition: 1;
+}
+.tbao{
+	position: absolute;
+	top: 12px;
+	right: 14px;
+
+	color: white;
+	background-color: red;
+	font-size: 12px;
+	height: 16px;
+	width: 16px;
+	text-align: center;
+	border-radius: 15px;
+}
 /*MAIN*/
 main{
 	padding-top: 5px;
 	
 }
 section{
-	padding-block: clamp(5rem, 10vw, 8rem);
+	padding-block: 8rem;
 }
 .container-vd{
 	display: grid;
@@ -83,6 +152,20 @@ section{
 	border-width: 1px;
 	border-style: solid;
 	border-color: rgb(15, 15, 15);
+	position: relative;
+}
+.time-vd{
+	position: absolute;
+	right: 20px;
+	top: 203px;
+
+	padding-inline: 6px;
+	padding-block: 1px;
+	background-color: rgb(34, 38, 30, 0.8);
+	color: white;
+	font-size: 14px;
+	border-radius: 5px;
+	
 }
 .img{
 	width: 95%;
